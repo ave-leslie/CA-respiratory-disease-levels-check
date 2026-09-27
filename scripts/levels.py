@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Weekly COVID-19 and flu levels for San Francisco and California.
+"""Weekly COVID-19 and flu levels for a focus location and for California.
 
-Reads data/rv-dashboard.csv (CDPH) and data/wastewater-ca.csv (CDC NWSS) from the
-current directory and prints one JSON object.
+Usage: python3 levels.py --region "Bay Area" --county "San Francisco"
+Reads rv-dashboard.csv (CDPH) and wastewater-ca.csv (CDC NWSS) from the current
+directory and prints one JSON object with levels for "local" and "ca".
 
 Each level synthesizes three indicators on the 5-step CDPH/CDC scale
 (Very Low=1 .. Very High=5):
@@ -11,10 +12,11 @@ Each level synthesizes three indicators on the 5-step CDPH/CDC scale
   - wastewater level          (CDC WVAL: median site value, CDC thresholds)
 Summary = mean of the available indicators, rounded half up.
 
-Geography: CDPH reports by region, so San Francisco uses the Bay Area region for
-test positivity and admissions, and San Francisco's own sewersheds for wastewater.
+Geography: CDPH reports by region, so the focus location uses its CDPH region for
+test positivity and admissions, and its own county's sewersheds for wastewater.
 California uses the statewide CDPH row and the median of all California sites.
 """
+import argparse
 import csv
 import datetime as dt
 import json
@@ -24,7 +26,6 @@ LEVELS = ["Very Low", "Low", "Moderate", "High", "Very High"]
 # CDC WVAL category upper bounds (https://www.cdc.gov/wastewater/about/wval.html)
 WVAL_BOUNDS = {"SARS-CoV-2": [2.6, 4.9, 7.9, 11.6], "Influenza A virus": [2.4, 5.5, 10.2, 15.6]}
 DISEASES = {"covid": ("COV", "SARS-CoV-2"), "flu": ("FLU", "Influenza A virus")}
-GEOS = {"sf": ("Bay Area", "San Francisco"), "ca": ("California", None)}
 STALE_DAYS = 9
 
 
@@ -36,6 +37,11 @@ def wval_level(value, pathogen):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--region", required=True, help="CDPH region, e.g. \"Bay Area\"")
+    ap.add_argument("--county", required=True, help="County name as CDC lists it, e.g. \"San Francisco\"")
+    args = ap.parse_args()
+    geos = {"local": (args.region, args.county), "ca": ("California", None)}
     today = dt.date.today()
     notes = []
 
@@ -61,9 +67,11 @@ def main():
             ww.append(r)
 
     out = {"week_ending": cdph_week.isoformat(), "levels": {}, "components": {}, "notes": notes}
-    for geo, (region, county) in GEOS.items():
+    for geo, (region, county) in geos.items():
         out["levels"][geo], out["components"][geo] = {}, {}
         row = latest.get(region)
+        if row is None:
+            notes.append(f"No CDPH row for region {region!r} in week ending {cdph_week}.")
         for disease, (prefix, pathogen) in DISEASES.items():
             comp = {}
             if row:
@@ -72,6 +80,8 @@ def main():
                         comp[key] = row[col]
             sites = [r for r in ww if r["pathogen_target"] == pathogen
                      and (county is None or county in r["counties_served"])]
+            if not sites:
+                notes.append(f"No CDC wastewater sites found for {county or 'California'} ({pathogen}).")
             if sites:
                 week = max(r["_date"] for r in sites)
                 vals = [r["_val"] for r in sites if r["_date"] == week]
