@@ -14,10 +14,25 @@ jobs:
         run: |
           mkdir -p data
           curl -sS -L -o data/rv-dashboard.csv "https://data.ca.gov/datastore/dump/8f813962-7c97-4b13-967b-ad6aef9d87aa?bom=True"
+      - name: Fetch CDC wastewater levels (California sites, last 10 weeks)
+        # CDC NWSS site-level Wastewater Viral Activity Level (WVAL), dataset atcp-73re, updated Fridays.
+        # A failure here keeps the previous file rather than failing the whole mirror.
+        run: |
+          since=$(date -u -d '70 days ago' +%Y-%m-%d)
+          if curl -sS -L -f -G -o /tmp/ww.csv "https://data.cdc.gov/resource/atcp-73re.csv" \
+               --data-urlencode "state_territory=California" \
+               --data-urlencode "\$where=week_end >= '${since}'" \
+               --data-urlencode "\$order=week_end DESC" \
+               --data-urlencode "\$limit=50000" \
+             && [ "$(wc -l < /tmp/ww.csv)" -gt 10 ]; then
+            mv /tmp/ww.csv data/wastewater-ca.csv
+          else
+            echo "::warning::CDC wastewater fetch failed; keeping previous data/wastewater-ca.csv"
+          fi
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/rv-dashboard.csv
-          git diff --cached --quiet || git commit -m "Update CDPH respiratory virus data"
+          git add data/
+          git diff --cached --quiet || git commit -m "Update CDPH respiratory virus and CDC wastewater data"
           git push
