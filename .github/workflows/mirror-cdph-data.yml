@@ -1,0 +1,23 @@
+name: Mirror CDPH respiratory virus data
+on:
+  schedule:
+    - cron: '0 12 * * *'  # daily at 12:00 UTC -- catches the Friday CDPH update with margin
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch CDPH dataset
+        run: |
+          mkdir -p data
+          curl -sS -L -o data/rv-dashboard.csv "https://data.ca.gov/datastore/dump/8f813962-7c97-4b13-967b-ad6aef9d87aa?bom=True"
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/rv-dashboard.csv
+          git diff --cached --quiet || git commit -m "Update CDPH respiratory virus data"
+          git push
