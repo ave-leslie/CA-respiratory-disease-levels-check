@@ -1,66 +1,22 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <html lang="en"  class="js">
   <head>
     <meta charset="utf-8" />
-      <meta name="generator" content="ckan 2.9.11" />
+      <meta name="csrf_field_name" content="_csrf_token" />
+      <meta name="_csrf_token" content="IjFkNjFiOTMyN2UyODEyZjFjYmY3OWM3MDBiNGE4MzM5OGZhY2NjMjMi.asUv9g.Af5KYFhmfQ9hht_wiy41XW0i2to" />
+      <meta name="site-root" content="https://publish.data.ca.gov/" />
+      <meta name="locale-root" content="https://publish.data.ca.gov/" />
+
+      <meta name="generator" content="ckan 2.12.0" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 404 - California Open Data</title>
+    <title>Error 404 - CA Open Data Publishing</title>
 
     
-    
-    <link rel="shortcut icon" href="/img/favicon.ico" />
-    
-    
-        
-    <!-- Google tag (gtag.js) -->
-    
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZK8JCN4R2"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-
-        
-            gtag('set', 'linker');
-
-            gtag('js', new Date());
-
-            gtag('config', 'G-YZK8JCN4R2', {
-                anonymize_ip: true,
-                linker: {
-                    domains: []
-                }
-            });
-        
-
-        
-        
-
-        </script>
-    
-
-    
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG8VBX1CS3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-ZG8VBX1CS3');
-    </script>
-
-
-
-    
-
-  
-  
-    
-    
+    <link rel="shortcut icon" href="/base/images/ckan.ico" />
     
   
-  
     
+  
   
       
       
@@ -68,255 +24,79 @@
     
   
 
-    
-    
-
-
-  <link rel="stylesheet" href="/css/custom.css" />
-
   
 
     
 
-    
-
-    
-    
-
-  <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
-
-  
-  
-
-  
   
 
 
     
-  
-      
-      
-    
-  <script defer src="https://alert.cdt.ca.gov" crossorigin="anonymous"></script>
-
-
-    
-    <link href="/webassets/base/2471d0b8_main.css" rel="stylesheet"/>
-<link href="/webassets/vendor/f3b8236b_select2.css" rel="stylesheet"/>
-<link href="/webassets/vendor/0b01aef1_font-awesome.css" rel="stylesheet"/>
-<link href="/webassets/opengov_custom_theme_resource/79f62e2e_main.css" rel="stylesheet"/>
+    <link href="/webassets/base/f1c08bee_main.css" rel="stylesheet"/>
+<link href="/webassets/cdt_theme/2a42fd7b_main.css" rel="stylesheet"/>
+<link href="/webassets/ckanext-activity/8dd77216_activity.css" rel="stylesheet"/>
+<link href="/webassets/ckanext-harvest/c95a0af2_harvest_css.css" rel="stylesheet"/>
 <link href="/webassets/ckanext-scheming/728ec589_scheming_css.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-harvest/5eed4f7b_harvest_css.css" rel="stylesheet"/>
-<link href="/webassets/md_view_assets/b80c6c86_markdown_resource_styles.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-geoview/f197a782_geo-resource-styles.css" rel="stylesheet"/>
-<link href="/webassets/opengov_custom_theme/4429c25c_theme.css" rel="stylesheet"/>
-    <style>
-        /* Display the Fire group as first on the homepage */
-a.browse-group[href="/group/fire"] {
-  order: -1;
-}
+    
+  
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
 
-.masthead .nav > li > a {
-  padding: 10px;
-}
-.masthead .site-search {
-  display: none;
-}
-.main-featured .heading, .main-browse .heading, .main-updates .heading {
-  border-bottom: 2px solid #cf6a04;
-}
-.add-member-form .control-label {
-  float: left;
-}
-.primary .dataset-item {
-  border-bottom: 1px dotted #dddddd;
-}
-.primary .dataset-item:last-of-type {
-  border-bottom: none;
-}
-
-.main-featured {
-  order: 1;
-}
-.main-browse {
-  order: 2;
-}
-.main-browse {
-  background: #EFF2F5;
-}
-.main-featured {
-  background: #FFFFFF; 
-}
-a.browse-group {
-  background-color: #FFFFFF;
-  margin: 0 10px 10px 0;
-}
-.browse-group-image {
-  height: 65px;
-}
-.browse-group-title {
-  font-weight: bolder;
-  height: 55px;
-}
-.media-grid .media-item {
-  height: 300px;
-  width: 220px;
-}
-
-/* A11y Fixes */
-body {
-  font-size: 16px;
-}
-h1 {
-  font-size: 32px;
-}
-h2 {
-  font-size: 26px;
-}
-h3 {
-  font-size: 22px;
-}
-h4 {
-  font-size: 20px;
-}
-h5 {
-  font-size: 18px;
-}
-.account-masthead .account ul li a {
-  font-size: 16px;
-  padding: 1px 10px;
-}
-.account-masthead .account.authed .image {
-  padding: 1px 6px;
-}
-.dataset-heading {
-  font-size: 18px;
-}
-.resource-item .heading,
-label,
-.form-control {
-  font-size: 16px;
-}
-.resource-item .description {
-  font-size: 14px;
-}
-code,
-pre {
-  font-size: 12px;
-}
-.notes a, p:not(.action) a {
-  text-decoration: underline;
-}
-
-.format-label {
-  background: url(https://caprod.ogopendata.com/base/images/sprite-resource-icons.png) no-repeat 0 0;
-  background-position: -1720px -220px;
-}
-      </style>
-    <style>
-
- .account-masthead {background: #044187}
- .account-masthead .account ul li a:hover {background: #005e8a}
- .account-masthead .account ul li a {color: #ffffff}
- .masthead, .main-navigation {background: #005e8a}
- .masthead .navigation .nav-pills li a:hover,.masthead .navigation .nav-pills li a:focus,.masthead .navigation .nav-pills li.active a,.main-navigation .main-navigation-title,.main-navigation .menu li a:hover,.main-navigation .menu li a:focus,.main-navigation .menu li.active a,label.nav-trigger,.navbar-toggle {background-color: #044187}
- .navbar .nav>li>a,.masthead .nav>li>a,.navbar .navbar-left>h1>a,.navbar .navbar-left>h2,.main-navigation .main-navigation-title,.main-navigation .menu li a {color: #ffffff}
- .module-heading {background: #005e8a}
- .module-heading,.module-heading .action {color: #ffffff}
- .site-footer, .footer-column-form .cke_reset {background: #044187}
- .site-footer a,.site-footer a:hover,.footer-column-form .cke_reset a {color: #ffffff}
- .site-footer,.site-footer label,.site-footer small,.footer-column-form .cke_reset {color: #ffffff}</style>
 
   </head>
 
   
-  <body data-site-root="https://data.ca.gov/" data-locale-root="https://data.ca.gov/" >
+  <body class="cdt">
 
     
-  <div class="visually-hidden-focusable skip-content"><a href="#content">Skip to content</a></div>
-
-
+    <div class="visually-hidden-focusable"><a href="#content">Skip to main content</a></div>
   
 
-  <div class="page" id="page">
+  
     
+
+<div class="cdt-statebar">
+  <div class="cdt-wrap">
+    <span class="cdt-statebar-note">Official website of the State of California</span>
+    <div class="cdt-statebar-links">
+      <a href="https://www.ca.gov">CA.gov</a>
       
-         
-<div class="account-masthead">
-  <div class="container">
-    
-       
-    <nav class="account not-authed" aria-label="Account">
-      <ul class="list-unstyled">
         
-    
-  <li><a href="/user/login">Log in</a></li>
-  
-
-    
-    <li>
-      <a href="/contact?ref=https%3A%2F%2Fdata.ca.gov%2Fdatastore%2Fdump%2F8f813962-7c97-4b13-967b-ad6aef9d87aa%3Fbom%3DTrue" title="Contact">
+          <a href="/user/login">Log in</a>
         
-           Contact
-        
-      </a>
-    </li>
-
-
-      </ul>
-    </nav>
-     
-    
+      
+    </div>
   </div>
 </div>
 
-<header class="navbar navbar-static-top masthead">
-  
-      
-  
-  <div class="container">
-    <div class="navbar-right">
-      <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed" type="button" aria-label="expand or collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="fa fa-bars"></span>
-      </button>
-    </div>
-    <div class="header-image navbar-left">
-      
-         
-      <a class="logo" href="/"><img src="/uploads/admin/2024-10-23-182031.666317ca-open-data-logo.png" alt="California Open Data" title="California Open Data" /></a>
-       
-      
-    </div>
-    <div class="collapse navbar-collapse" id="main-navigation-toggle">
-      
-      <nav class="section navigation" aria-label="Navigation">
-        <ul class="nav nav-pills">
-            
-              <li><a href="/group/fire">FIRE DATA</a></li><li><a href="/dataset">Datasets</a></li><li><a href="/organization">Organizations</a></li><li><a href="/group">Topics</a></li><li><a href="/pages/state-portals">State Portals</a></li><li><a href="/pages/documentation">Documentation</a></li><li><a href="/pages/portal-metrics">Portal Metrics</a></li><li><a href="/pages/ca-state-geoportal">CA State Geoportal</a></li><li><a href="/about">About</a></li>
-            
-        </ul>
-      </nav>
-      
-      
-        
-      <form class="section site-search simple-input" action="/dataset/" method="get">
-        <div class="field">
-          <label for="field-sitewide-search">Search Datasets</label>
-          <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="Search" aria-label="Search datasets"/>
-          <button class="btn-search" type="submit" aria-label="Submit"><i class="fa fa-search"></i></button>
-        </div>
-      </form>
-      
-      
-    </div>
+<header class="cdt-header">
+  <div class="cdt-wrap cdt-header-top">
+    <a class="cdt-brand" href="/">
+      <img src="/cdt_theme/images/ca-open-data-logo.png"
+           alt="California Open Data"
+           class="cdt-brand-logo">
+    </a>
+    <form class="cdt-header-search" action="/dataset/" method="get" role="search">
+      <label class="sr-only" for="cdt-header-q">Search datasets</label>
+      <input id="cdt-header-q" type="text" name="q" value=""
+             placeholder="Search datasets" autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  <div class="cdt-nav-bar">
+    <nav class="cdt-wrap cdt-nav">
+      <a href="/dataset/?groups=fire"><span class="cdt-nav-dot"></span>Fire Data</a>
+      <a href="/dataset/">Datasets</a>
+      <a href="/organization/">Organizations</a>
+      <a href="/group/">Topics</a>
+      <a href="https://gis.data.ca.gov/">CA State Geoportal</a>
+      <a href="/about">About</a>
+    </nav>
   </div>
 </header>
-
-      
-    
-      
+  
     <div class="main">
       <div id="content" class="container">
         
@@ -341,12 +121,15 @@ pre {
 
             
   <article class="module">
-    <div class="module-content">
+    <div class="module-content" id="error-content">
       
       <h1>404 Not Found</h1>
       
       DataStore resource not found
     </div>
+    
+    
+  
   </article>
 
           </div>
@@ -354,161 +137,66 @@ pre {
       </div>
     </div>
   
-    
-      
-  
-      <footer class="site-footer">
-  <div class="container">
-    
-  <div class="row">
-    
-    
-    
-      <div class="col-md-4 span4 footer-links">
-        <ul class="list-unstyled">
-	<li><a href="/about">About California Open Data</a></li>
-	<li><a href="https://docs.ckan.org/en/2.9/api/" target="_blank">API Documentation</a></li>
-	<li><a href="/contact">Contact Us</a></li>
-</ul>
-
-      </div>
-    
-      <div class="col-md-4 span4 footer-links">
-        <ul class="list-unstyled">
-	<li><a href="/pages/portal-metrics">Portal Metrics</a></li>
-	<li><a href="/pages/website-accessibility-certification">Website Accessibility Certification</a></li>
-</ul>
-
-      </div>
-    
-      <div class="col-md-4 span4 footer-links">
-        
-      </div>
-    
-    <div class="attribution og-attribution">
-      
-        <strong>Powered by</strong>
-        <div class="og-links">
-          <a class="pull-left" href="https://opengov.com/?utm_campaign=Footer-Product-OpenData&utm_source=OpenGov&utm_medium=product&utm_term=PO-OGOV-1274&utm_content=logo" target="_blank">
-            <img src="/img/OpenGov-Logo-RGB-White.svg" alt="OpenGov" height="25">
-          </a>
-          <a class="hide-text ckan-footer-logo pull-right" href="https://ckan.org" target="_blank">CKAN</a>
+    <footer class="cdt-footer">
+  <div class="cdt-wrap">
+    <div class="cdt-footer-grid">
+      <div>
+        <div class="cdt-footer-brand">
+          <img src="/cdt_theme/images/ca-open-data-logo.png"
+               alt="California Open Data"
+               class="cdt-footer-logo">
         </div>
-      
-      
-        
-<form class="form-inline form-select lang-select" action="/util/redirect" data-module="select-switch" method="POST">
-  <label for="field-lang-select">Language</label>
-  <select id="field-lang-select" name="url" data-module="autocomplete" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
-    
-      <option value="/en/datastore/dump/8f813962-7c97-4b13-967b-ad6aef9d87aa?bom=True" selected="selected">
-        English
-      </option>
-    
-      <option value="/de/datastore/dump/8f813962-7c97-4b13-967b-ad6aef9d87aa?bom=True" >
-        Deutsch
-      </option>
-    
-      <option value="/es/datastore/dump/8f813962-7c97-4b13-967b-ad6aef9d87aa?bom=True" >
-        español
-      </option>
-    
-      <option value="/fr/datastore/dump/8f813962-7c97-4b13-967b-ad6aef9d87aa?bom=True" >
-        français
-      </option>
-    
-      <option value="/it/datastore/dump/8f813962-7c97-4b13-967b-ad6aef9d87aa?bom=True" >
-        italiano
-      </option>
-    
-  </select>
-  <button class="btn btn-default js-hide" type="submit">Go</button>
-</form>
-      
+        <p>CA Open Data Publishing</p>
+      </div>
+      <div>
+        <div class="cdt-footer-head">Explore</div>
+        <div class="cdt-footer-links">
+          <a href="/dataset/">Datasets</a>
+          <a href="/group/">Topics</a>
+          <a href="/organization/">Publishers</a>
+        </div>
+      </div>
+      <div>
+        <div class="cdt-footer-head">Build</div>
+        <div class="cdt-footer-links">
+          <a href="https://docs.ckan.org/en/latest/api/">API documentation</a>
+          <a href="/data.json">Data catalog (data.json)</a>
+          <a href="/dcat.json">DCAT catalog</a>
+        </div>
+      </div>
+      <div>
+        <div class="cdt-footer-head">Support</div>
+        <div class="cdt-footer-links">
+          <a href="/about">About this portal</a>
+          <a href="/dataset/">Request a dataset</a>
+        </div>
+      </div>
+    </div>
+    <div class="cdt-footer-legal">
+      <span>&copy; 2026 State of California</span>
     </div>
   </div>
-
-  </div>
-
-  
-    
-  
 </footer>
   
-
-    </div>
-
   
-    
-  
-  
-  
-    
   
   
   
     
 
   
-    
-  
-
-
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TKCM6M7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TKCM6M7');</script>
-<!-- End Google Tag Manager -->
 
 
     
-        
-        
-        <div class="js-hide" data-module="google-analytics"
-             data-module-googleanalytics_resource_prefix="/downloads/">
-        </div>
     
-
-  <script>
-    var writeKey = "3L1FWi3tBfRI7pt0n1tb6w8WhTvMNObJ";
-    if(writeKey !== ""){
-      !function(){var i="analytics",analytics=window[i]=window[i]||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","screen","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware","register"];analytics.factory=function(e){return function(){if(window[i].initialized)return window[i][e].apply(window[i],arguments);var n=Array.prototype.slice.call(arguments);if(["track","screen","alias","group","page","identify"].indexOf(e)>-1){var c=document.querySelector("link[rel='canonical']");n.push({__t:"bpc",c:c&&c.getAttribute("href")||void 0,p:location.pathname,u:location.href,s:location.search,t:document.title,r:document.referrer})}n.unshift(e);analytics.push(n);return analytics}};for(var n=0;n<analytics.methods.length;n++){var key=analytics.methods[n];analytics[key]=analytics.factory(key)}analytics.load=function(key,n){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.setAttribute("data-global-segment-analytics-key",i);t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r);analytics._loadOptions=n};analytics._writeKey=writeKey;;analytics.SNIPPET_VERSION="5.2.0";
-        
-      }}();
-    }
-  </script>
-
-
-    
-        
-        
-        
-    
-
-
-  
-  
-
-      
-
-    
-    
-    
-    <script src="/webassets/vendor/d8ae4bed_jquery.js" type="text/javascript"></script>
-<script src="/webassets/vendor/bfa47fa0_vendor.js" type="text/javascript"></script>
-<script src="/webassets/vendor/580fa18d_bootstrap.js" type="text/javascript"></script>
-<script src="/webassets/base/898d50a3_main.js" type="text/javascript"></script>
-<script src="/webassets/opengov_custom_theme_resource/abfa64d4_main.js" type="text/javascript"></script>
-<script src="/webassets/showcase/f1e0c50f_slick.js" type="text/javascript"></script>
-<script src="/webassets/opengov_custom_theme/fc709ed7_theme.js" type="text/javascript"></script>
-<script src="/webassets/base/2448af8b_ckan.js" type="text/javascript"></script>
-<script src="/webassets/base/cd2c0272_tracking.js" type="text/javascript"></script>
-<script src="/webassets/ckanext-googleanalytics/event_tracking.js?71ae8997" type="text/javascript"></script>
-<script src="/webassets/vendor/76d36bbb_fileupload.js" type="text/javascript"></script>
-<script src="/webassets/ckanext-cloudstorage/0cf5be9f_main.js" type="text/javascript"></script>
-  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a45ef32458e4a38d',t:'MTc5MTIyOTc2OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    <link href="/webassets/vendor/e6de4a7c_select2.css" rel="stylesheet"/>
+<link href="/webassets/vendor/a760c347_fontawesome.css" rel="stylesheet"/>
+    <script src="/webassets/vendor/240e5086_jquery.js" type="text/javascript"></script>
+<script src="/webassets/vendor/3a144df1_vendor.js" type="text/javascript"></script>
+<script src="/webassets/vendor/3a25332d_htmx.js" type="text/javascript"></script>
+<script src="/webassets/base/975ea767_main.js" type="text/javascript"></script>
+<script src="/webassets/vendor/6b293cd1_bootstrap.js" type="text/javascript"></script>
+<script src="/webassets/base/a4ef7c98_ckan.js" type="text/javascript"></script>
+<script src="/webassets/activity/37d5e99a_activity.js" type="text/javascript"></script>
+  </body>
 </html>
