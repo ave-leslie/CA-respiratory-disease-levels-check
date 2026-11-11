@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
       <meta name="csrf_field_name" content="_csrf_token" />
-      <meta name="_csrf_token" content="IjE5NzIxZWM0NjcwOGJhNjVlNzMwODcwYzBlNWRhNzU2ODUwM2I5MGUi.avNpJg.SCm7MAajkrCOoGIbNu9x3cEMvgk" />
+      <meta name="_csrf_token" content="Ijg4NzA1OWNiNDliYWU5ZTU5MGNmZjQ4ZTMwZjlkMTk1OTkzNjc0MDgi.avS6QA.R_3IJAD2TGVW6fmCJtM12dDLER0" />
       <meta name="site-root" content="https://publish.data.ca.gov/" />
       <meta name="locale-root" content="https://publish.data.ca.gov/" />
 
@@ -87,7 +87,7 @@
   </div>
   <div class="cdt-nav-bar">
     <nav class="cdt-wrap cdt-nav">
-      <a href="/dataset/?groups=fire"><span class="cdt-nav-dot"></span>Fire Data</a>
+      <a href="/dataset/?q=vocab_subtopics:(%22natural-resources-conservation/fire-incidents-history%22+OR+%22natural-resources-conservation/fire-hazard-risk%22+OR+%22natural-resources-conservation/prescribed-fire-fuels%22+OR+%22natural-resources-conservation/fire-recovery-resilience%22)"><span class="cdt-nav-dot"></span>Fire Data</a>
       <a href="/dataset/">Datasets</a>
       <a href="/organization/">Organizations</a>
       <a href="/group/">Topics</a>
